@@ -17,10 +17,12 @@ const Login = () => {
         if (result.data.token) {
           const decoded = jwtDecode(result.data.token);
           sessionStorage.setItem("token", result.data.token);
+          console.log(decoded.email);
           if (decoded.email.includes("@numetry")) {
             console.log('dashboard');
+            navigate("/admin");
           } else {
-            navigate("/dashboard");
+            navigate("/");
           }
         } else {
           setError("Login failed. Please check your credentials.");

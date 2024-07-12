@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <div className="flex items-center">
            <NavLink to="/" className="flex items-center">
-              <img src="https://webstockreview.net/images/dairy-clipart-grocery-item-4.png" alt="Logo" className="h-16 mr-4" />
+              <img src="../../../../public/images/grocery_logo.png" alt="Logo" className="h-16 mr-4" />
            </NavLink>
         </div>
           <div className="flex-grow mx-4 ml-28">

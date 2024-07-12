@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 import { FaUser, FaEnvelope, FaMobileAlt, FaLock, FaArrowRight, FaRegUserCircle, FaKey } from 'react-icons/fa';
 
@@ -6,22 +7,36 @@ const SignUp = () => {
 
   // State for form fields
   const [formData, setFormData] = useState({
-    fullName: '',
+    confirmPassword: '',
+    name: '',
     username: '',
     email: '',
-    mobile: '',
+    phone: '',
     password: '',
-    confirmPassword: '',
     userType: ''
   });
 
+  const creatUser = async (e) => {
+    try {
+        const response = await axios.post('https://envanto-backend-api.onrender.com/register', formData);
+        // formData.username,formData.email,formData.name,formData.password,formData.userType,formData.phone
+        alert(response.data);
+    } catch (error) {
+        alert('Error registering user');
+    }
+};
+
+
   const handleSubmit = (e) => {
+
     
     e.preventDefault();
     
-    if (formData.fullName && formData.username && formData.email && formData.mobile && formData.password && formData.confirmPassword && formData.userType) {
-      
+    if (formData.name && formData.username && formData.email && formData.phone && formData.password  && formData.userType) {
+      creatUser();
+      console.log(formData);
       setShowPopup(true);
+      
     } else {
       alert('Please fill out all fields.');
     }
@@ -32,10 +47,10 @@ const SignUp = () => {
     setShowPopup(false);
     // Clear the form fields
     setFormData({
-      fullName: '',
+      name: '',
       username: '',
       email: '',
-      mobile: '',
+      phone: '',
       password: '',
       confirmPassword: '',
       userType: ''
@@ -77,9 +92,9 @@ const SignUp = () => {
             <FaRegUserCircle className="absolute left-3 top-3 text-gray-400" />
             <input
               type="text"
-              name="fullName"
+              name="name"
               placeholder="Full Name"
-              value={formData.fullName}
+              value={formData.name}
               onChange={handleInputChange}
               className="w-full pl-10 pr-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
               required
@@ -113,9 +128,9 @@ const SignUp = () => {
             <FaMobileAlt className="absolute left-3 top-3 text-gray-400" />
             <input
               type="text"
-              name="mobile"
-              placeholder="Mobile"
-              value={formData.mobile}
+              name="phone"
+              placeholder="phone"
+              value={formData.phone}
               onChange={handleInputChange}
               className="w-full pl-10 pr-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
               required
@@ -156,8 +171,8 @@ const SignUp = () => {
               <option value="" disabled defaultValue>
                 User Type
               </option>
-              <option value="customer">Customer</option>
-              <option value="seller">Seller</option>
+              <option value="user">user</option>
+              <option value="admin">admin</option>
             </select>
           </div>
           <button
