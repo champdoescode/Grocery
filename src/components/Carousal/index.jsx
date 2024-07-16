@@ -74,7 +74,7 @@ const Carousel = () => {
   }, [slide]);
 
   return (
-    <div className='max-w-full mt-40 relative flex justify-center items-center'>
+    <div className='max-w-full pt-40 relative flex justify-center items-center'>
       {sliderData.map((item, index) => (
         <div key={index} className={`transition-opacity duration-1000 ${index === slide ? 'opacity-100' : 'opacity-0'}`}>
           {index === slide && (

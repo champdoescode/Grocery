@@ -63,7 +63,7 @@ const AllProducts = () => {
   const uniqueBrands = [...new Set(productsData.flatMap(cat => cat.subCategories.flatMap(subCat => subCat.products.map(product => product.brand))))];
 
   return (
-    <div className="p-4 mt-40">
+    <div className="p-4 pt-44">
       <div className="flex space-x-4">
         <div className="w-1/4">
           <h2 className="text-xl font-bold mb-4">Categories</h2>

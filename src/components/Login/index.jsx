@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSignIn = async () => {
-      axios
+      axios 
       .post("https://envanto-backend-api.onrender.com/login", { email, password })
       .then((result) => {
         console.log(result);
@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center mt-40">
+    <div className="relative min-h-screen flex items-center justify-center pt-40">
       <img
         src="https://wallpaperaccess.com/full/3493336.jpg"
         alt="Background"

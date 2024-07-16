@@ -4,10 +4,10 @@ import { faFacebookF, faTwitter, faDribbble, faInstagram } from '@fortawesome/fr
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 py-12 ">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 px-8 ">
-        <div className='m-7' style={{ width: '100%' }}>
-          <img src="https://webstockreview.net/images/dairy-clipart-grocery-item-4.png" alt="Carrot Logo" className="w-36 h-auto mb-4" />
+    <footer className="bg-gray-100 py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="m-7" style={{ width: '100%' }}>
+          <img src="../../../../public/images/2.png" alt="Carrot Logo" className="w-36 h-auto mb-4" />
           <p>Easy Grocery is the biggest market of grocery products. Get your daily needs from our store.</p>
           <ul className="mt-4">
             <li className="flex items-center mb-4">
@@ -25,7 +25,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='m-8 ml-28'>
+        <div className="m-8 md:ml-7">
           <h3 className="text-xl font-bold mb-4">Company</h3>
           <ul>
             <li className="mb-5"><a href="#" className="hover:text-teal-600">About Us</a></li>
@@ -37,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='m-8 md:ml-7'>
+        <div className="m-8 md:ml-7">
           <h3 className="text-xl font-bold mb-4">Category</h3>
           <ul>
             <li className="mb-5"><a href="#" className="hover:text-teal-600">Dairy & Bakery</a></li>
@@ -49,7 +49,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='m-8 md:ml-[-4rem]'>
+        <div className="m-8 md:ml-7">
           <h3 className="text-xl font-bold mb-4">Subscribe Our Newsletter</h3>
           <div className="flex mb-4">
             <input
@@ -62,54 +62,32 @@ const Footer = () => {
             </button>
           </div>
           <div className="flex space-x-2 mb-4">
-            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-white-500 hover:text-teal-600">
+            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-gray-200 hover:text-teal-600">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-white-500 hover:text-teal-600">
+            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-gray-200 hover:text-teal-600">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-white-500 hover:text-teal-600">
+            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-gray-200 hover:text-teal-600">
               <FontAwesomeIcon icon={faDribbble} />
             </a>
-            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-white-500 hover:text-teal-600">
+            <a href="#" className="p-2 bg-white border border-gray-300 rounded hover:bg-gray-200 hover:text-teal-600">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
           <div className="flex space-x-2">
-            <div className="relative group">
-              <img src="https://maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/assets/img/insta/1.jpg" alt="Category" className="w-20 h-20 rounded" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 rounded group-hover:opacity-100 transition-opacity">
-                <FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" />
+            {['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'].map((img, idx) => (
+              <div className="relative group" key={idx}>
+                <img src={`https://maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/assets/img/insta/${img}`} alt="Category" className="w-20 h-20 rounded" />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 rounded group-hover:opacity-100 transition-opacity">
+                  <FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" />
+                </div>
               </div>
-            </div>
-            <div className="relative group">
-              <img src="https://maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/assets/img/insta/2.jpg" alt="Category" className="w-20 h-20 rounded" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 rounded group-hover:opacity-100 transition-opacity">
-                <FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" />
-              </div>
-            </div>
-            <div className="relative group">
-              <img src="https://maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/assets/img/insta/3.jpg" alt="Category" className="w-20 h-20 rounded" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 rounded group-hover:opacity-100 transition-opacity">
-                <FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" />
-              </div>
-            </div>
-            <div className="relative group">
-              <img src="https://maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/assets/img/insta/4.jpg" alt="Category" className="w-20 h-20 rounded" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 rounded group-hover:opacity-100 transition-opacity">
-                <FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" />
-              </div>
-            </div>
-            <div className="relative group">
-              <img src="https://maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/assets/img/insta/5.jpg" alt="Category" className="w-20 h-20 rounded" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 rounded group-hover:opacity-100 transition-opacity">
-                <FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-      <div className="text-center mt-5 marker:">
+      <div className="text-center mt-5">
         <p>© 2024 <a href="#" className="text-teal-900 font-bold">Easy Grocery</a>, All rights reserved.</p>
       </div>
     </footer>

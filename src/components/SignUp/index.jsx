@@ -66,10 +66,10 @@ const SignUp = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-teal-50 p-4 mt-40">
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-teal-50 p-4 pt-40">
       {/* Left side - Text */}
       <div className="md:w-1/2 flex flex-col items-center justify-center p-8 space-y-6">
-      <h2 className="text-8xl font-extrabold text-teal-600 text-center italic font-cursive">
+      <h2 className="text-7xl font-extrabold text-teal-600 text-center italic font-cursive">
         Fresh Groceries Delivered to Your Doorstep
       </h2>
 
